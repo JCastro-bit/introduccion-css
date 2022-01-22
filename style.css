@@ -1,0 +1,222 @@
+html,
+body {
+  font-family: 'Roboto Mono', sans-serif;
+  background-color: #D6EADF;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bebas Neue", monospace;
+}
+
+section {
+  width: 800px;
+  margin: 20px auto 0;
+  padding: 15px 15px 0;
+  border: 1px solid #b1bdcc;
+  border-radius: 15px;
+  box-shadow: 0px 0px 16px 1px #bdd0e9;
+}
+
+section a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #1C1D21;
+}
+
+.image,
+.about,
+.skills .skill-list {
+  display: inline-block;
+}
+
+.image {
+  width: 260px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15%;
+  box-shadow: 0px 0px 16px 1px #1C1D21;
+  /* box-shadow: 10px 5px 5px black; */
+}
+
+.about {
+  width: 460px;
+  padding: 10px 15px;
+}
+
+.video-responsive {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  /* con base en el aspect ratio del formato de video de YouTube */
+  padding-top: 30px;
+  position: relative;
+  width: 800px;
+  margin: 0 auto 15px;
+}
+
+.video-responsive iframe {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.skills div.skill-list {
+  vertical-align: top;
+  margin: 0 30px;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social ul li {
+  display: inline;
+  font-size: 17px;
+  margin-right: 15px;
+}
+
+.skill-list:first-of-type {
+  margin-left: 0 !important;
+}
+
+section a:hover {
+  color: #ff007b;
+}
+
+.social ul li:first-child a:hover {
+  color: #0a66c2;
+}
+
+.social ul li:nth-child(2) a:hover {
+  color: #00acee;
+}
+
+
+@media (min-width: 576px) and (max-width: 800px) {
+
+  section {
+    width: 90vw;
+  }
+
+  .image,
+  .about {
+    display: block;
+  }
+
+  .image {
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .about {
+    width: auto;
+  }
+
+  .video-responsive {
+    width: auto;
+    margin: 0 15px 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+
+  body {
+    font-size: 1.2em;
+  }
+
+  section {
+    width: 85vw;
+
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .image,
+  .about,
+  .skills .skill-list {
+    display: block;
+  }
+
+  .image {
+    width: auto;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .about {
+    width: auto;
+  }
+
+  .video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    width: auto;
+    margin: 0 15px 15px;
+  }
+
+  .video-responsive iframe {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .skill-list:first-of-type {
+    margin-left: 30px !important;
+  }
+
+  .social ul li {
+    font-size: 1.3em;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+}
+
+.typewriter-effect {
+  display: flex;
+  justify-content: left;
+  font-family: bebas neue;
+}
+
+.typewriter-effect>.text {
+  max-width: 0;
+  animation: typing 3s steps(var(--characters)) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typewriter-effect:after {
+  content: " ";
+  animation: blink 1s infinite;
+  animation-timing-function: step-end;
+}
+
+@keyframes typing {
+
+  75%,
+  100% {
+    max-width: calc(var(--characters) * 1ch);
+  }
+}
